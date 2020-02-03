@@ -1,0 +1,136 @@
+# Code from http://adv-r.had.co.nz/Functions.html
+# install.packages("pryr")
+library(pryr)
+
+# Prerequisites The only package you’ll need is pryr, which is used to explore
+# what happens when modifying vectors in place. Install it with
+# install.packages("pryr").
+
+## All R functions have three parts:
+# 1. the body(), the code inside the function.
+# 2. the formals(), the list of arguments which controls how you can call the function.
+# 3. the environment(), the “map” of the location of the function’s variables.
+
+
+f <- function(x) x^2
+f
+formals(f)
+body(f)
+environment(f)
+
+objs <- mget(ls("package:base"), inherits = TRUE)
+funs <- Filter(is.function, objs)
+
+f <- function() {
+  x <- 1
+  y <- 2
+  c(x, y)
+}
+f()
+rm(f)
+
+x <- 2
+g <- function() {
+  y <- 1
+  c(x, y)
+}
+g()
+rm(g)
+
+x <- 1
+h <- function() {
+  y <- 2
+  i <- function() {
+    z <- 3
+    c(x, y, z)
+  }
+  i()
+}
+h()
+rm(x, h)
+
+
+j <- function(x) {
+  y <- 2
+  function() {
+    c(x, y)
+  }
+}
+k <- j(1)
+k()
+rm(j, k)
+
+
+l <- function(x) x + 1
+m <- function() {
+  l <- function(x) x * 2
+  l(10)
+}
+m()
+
+rm(l, m)
+
+
+n <- function(x) x / 2
+o <- function() {
+  n <- 10
+  n(n)
+}
+o()
+#> [1] 5
+rm(n, o)
+
+
+j <- function() {
+  if (!exists("a")) {
+    a <- 1
+  } else {
+    a <- a + 1
+  }
+  a
+}
+j()
+rm(j)
+
+f <- function(x) {
+  f <- function(x) {
+    f <- function(x) {
+      x ^ 2
+    }
+    f(x) + 1
+  }
+  f(x) * 2
+}
+f(10)
+rm(f)
+
+
+f1 <- function(x = {y <- 1; 2}, y = 0) {
+  x + y
+}
+f1()
+rm(f1)
+
+
+f2 <- function(x = z) {
+  z <- 100
+  x
+}
+f2()
+rm(f2)
+
+
+makeCacheMatrix <- function(x = matrix()) {
+    m <- NULL
+    set <- function(y) {
+        x <<- y
+        m <<- NULL
+    }
+      get <- function() x
+      setinv <- function(inv) m <<- inv
+      getinv <- function() m
+    
+        list(set = set, get = get,
+              setinv = setinv,
+              getinv = getinv)
+}

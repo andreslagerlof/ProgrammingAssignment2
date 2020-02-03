@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1580661230271.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "699231471",
+    "id" : "BD20F2F",
+    "lastKnownWriteTime" : 1580764714,
+    "last_content_update" : 1580764714120,
+    "path" : "C:/Users/AndrésLagerlöf/OneDrive - Andrés Lagerlöf Konsulttjänst AB/Plugg/Coursera/John Hopkins Data Sciense/02 R programming/03 W3/Assignment/ProgrammingAssignment2/exaples.R",
+    "project_path" : "exaples.R",
+    "properties" : {
+        "cursorPosition" : "50,30",
+        "scrollLine" : "32",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

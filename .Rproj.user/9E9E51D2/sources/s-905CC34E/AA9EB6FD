@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1580660548842.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2388614111",
+    "id" : "AA9EB6FD",
+    "lastKnownWriteTime" : 1580764689,
+    "last_content_update" : 1580764689070,
+    "path" : "C:/Users/AndrésLagerlöf/OneDrive - Andrés Lagerlöf Konsulttjänst AB/Plugg/Coursera/John Hopkins Data Sciense/02 R programming/03 W3/Assignment/ProgrammingAssignment2/cachematrix.R",
+    "project_path" : "cachematrix.R",
+    "properties" : {
+        "cursorPosition" : "24,7",
+        "scrollLine" : "0"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
